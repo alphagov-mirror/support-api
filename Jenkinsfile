@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-library("govuk")
+library("govuk@add-support-for-rcov-and-junit")
 
 node("postgresql-9.3") {
   govuk.buildProject(
