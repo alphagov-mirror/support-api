@@ -9,7 +9,7 @@ class S3FileUploader
 
     directory = connection.directories.get(ENV["AWS_S3_BUCKET_NAME"])
 
-    directory.files.create(
+    directory.files.create!(
       key: filename,
       body: csv,
     )

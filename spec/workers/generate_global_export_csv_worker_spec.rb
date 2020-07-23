@@ -17,7 +17,7 @@ describe GenerateGlobalExportCsvWorker, type: :worker do
       aws_access_key_id: ENV["AWS_ACCESS_KEY_ID"],
       aws_secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"],
     )
-    @directory = connection.directories.get(ENV["AWS_S3_BUCKET_NAME"]) || connection.directories.create(key: ENV["AWS_S3_BUCKET_NAME"])
+    @directory = connection.directories.get(ENV["AWS_S3_BUCKET_NAME"]) || connection.directories.create!(key: ENV["AWS_S3_BUCKET_NAME"])
   end
 
   it "has the expected filename" do
